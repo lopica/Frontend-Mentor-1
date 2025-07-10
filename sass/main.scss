@@ -58,6 +58,12 @@ body {
 
 .illustration-mockup {
   width: 100%;
+  max-width: 50rem;
+  justify-self: center;
+
+  @media only screen and (min-width: $bp) {
+    font-size: 5rem;
+  }
 }
 
 .heading-1 {
