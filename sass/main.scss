@@ -1,0 +1,137 @@
+$color-primary-dark: hsl(257, 40%, 49%);
+$color-primary-light: hsl(300, 69%, 71%);
+$color-text: #fff;
+
+$bp: 90em;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+  color: $color-text;
+}
+
+body {
+  font-family: "Open Sans", sans-serif;
+  background-color: $color-primary-dark;
+  background-image: url("../images/bg-mobile.svg");
+  background-repeat: no-repeat;
+  background-position: top center;
+  background-size: 100% auto;
+
+  @media only screen and (min-width: $bp) {
+    background-image: url("../images/bg-desktop.svg");
+    background-size: cover;
+  }
+}
+
+.container {
+  padding: 4rem;
+  text-align: center;
+  height: 100vh;
+
+  display: grid;
+  gap: 4.5rem;
+
+  @media only screen and (min-width: $bp) {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+    column-gap: 5rem;
+    text-align: start;
+    padding: 4.5rem 6rem;
+  }
+}
+
+.logo {
+  height: 3rem;
+
+  @media only screen and (min-width: $bp) {
+    grid-column: 1 / -1;
+    margin-bottom: 5rem;
+    height: 5rem;
+  }
+}
+
+.illustration-mockup {
+  width: 100%;
+}
+
+.heading-1 {
+  font-family: "Poppins", sans-serif;
+  font-size: 2.6rem;
+  font-weight: 500;
+  line-height: 1.5;
+  margin-bottom: 1.5rem;
+
+  @media only screen and (min-width: $bp) {
+    font-size: 5rem;
+  }
+}
+
+p {
+  font-size: 1.6rem;
+  font-weight: 300;
+
+  @media only screen and (min-width: $bp) {
+    font-size: 2.4rem;
+  }
+}
+
+.btn {
+  background-color: $color-text;
+  color: $color-primary-dark;
+  border: none;
+  border-radius: 100px;
+  width: 20rem;
+  height: 4rem;
+  margin-top: 2rem;
+
+  &:hover {
+    background-color: $color-primary-light;
+    color: $color-text;
+  }
+
+  @media only screen and (min-width: $bp) {
+    font-size: 2.4rem;
+    height: 6rem;
+    width: 28rem;
+    margin-top: 4rem;
+  }
+}
+
+.social-channels {
+  display: flex;
+  gap: 1rem;
+  justify-self: center;
+
+  @media only screen and (min-width: $bp) {
+    grid-column: 1 / -1;
+    justify-self: end;
+    margin-right: 5rem;
+    gap: 1.5rem;
+    align-self: self-end;
+  }
+
+  &__logo {
+    fill: currentColor;
+    height: 2.8rem;
+    width: 2.8rem;
+    padding: 0.5rem;
+    border: 1px solid currentColor;
+    border-radius: 50%;
+
+    &:hover {
+        color: $color-primary-light;
+    }
+
+    @media only screen and (min-width: $bp) {
+      height: 3.5rem;
+      width: 3.5rem;
+      padding: 0.5rem;
+    }
+  }
+}
